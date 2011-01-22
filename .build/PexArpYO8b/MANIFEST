@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST
+META.yml
+Makefile.PL
+README
+dist.ini
+lib/World.pm
+lib/World/Item.pm
+lib/World/NPC.pm
+lib/World/Room.pm
+t/Item.t
+t/NPC.t
+t/Room.t
+t/World.t
+t/release-pod-coverage.t
+t/release-pod-syntax.t
