@@ -5,15 +5,15 @@ use Moose;
 extends "World";
 
 has 'exits' => (
-		isa => 'HashRef',
-		is => 'ro',
-		required => 1,
-	       );
+    isa => 'HashRef',
+    is => 'ro',
+    required => 1,
+);
 
 has items => (
-		isa => 'ArrayRef',
-		is => 'rw',
-	      );
+    isa => 'ArrayRef',
+    is => 'rw',
+);
 1;
 
 __END__

@@ -15,40 +15,40 @@ my $description = IsHashRef (
 =cut
 
 has 'name' => (
-		isa => 'Str',
-		is => 'ro',
-		required => 1
-	      );
+    isa => 'Str',
+    is => 'ro',
+    required => 1
+);
 
 has 'description' => (
-		isa => 'Str',
-		is => 'ro',
-		required => 1
-		);
+    isa => 'Str',
+    is => 'ro',
+    required => 1
+);
 
 has 'stateDescriptions' => (
-		isa => 'ArrayRef',
-		is => 'ro',
-		required => 1,
-	       );
+    isa => 'ArrayRef',
+    is => 'ro',
+    required => 1,
+);
 
 has 'currentState' => (
-		isa => 'Int',
-		is => 'rw',
-		required => 1,
-		default => 0
-	       );
+    isa => 'Int',
+    is => 'rw',
+    required => 1,
+    default => 0
+);
 
 sub setState {
-	my ($self, $state) = @_;
-	return $state < @{$self->stateDescriptions} &&
-		$self->currentState($state);
+    my ($self, $state) = @_;
+    return $state < @{$self->stateDescriptions} &&
+        $self->currentState($state);
 }
 
 sub showState {
-	my $self = shift;
-	return $self->description.
-		@{$self->stateDescriptions}[$self->currentState];
+    my $self = shift;
+    return $self->description.
+        @{$self->stateDescriptions}[$self->currentState];
 }
 
 1;
